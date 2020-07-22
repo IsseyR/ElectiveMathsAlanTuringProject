@@ -10,43 +10,56 @@ import EnigmaKit
 
 
 class CipherFunctions {
+    
+   
+    
     //----------Caesar Cipher----------//
     
-    static func caeser(input: String, shift: Int, encode: Bool) -> String {
+    static func caeser(input: String, shift: Int, encode: Bool) throws -> String {
         var output: String = String()
-        input.forEach() { character in
-            var characterOut: Character = "A"
-            let currentLetterValue = character.asciiValue
-            if let currentLetterValue = currentLetterValue {
-                let oldChar = character
-                let newValue = encode ? currentLetterValue + UInt8(shift) : currentLetterValue - UInt8(shift)
-              
-                characterOut = Character(UnicodeScalar(newValue))
-                
-                if !((currentLetterValue >= 65 && currentLetterValue <= 90) || (currentLetterValue >= 97 && currentLetterValue <= 122)) {
-                    characterOut = character
-                } else if oldChar.isUppercase && (currentLetterValue + UInt8(shift) > UInt8(90)) && encode {
-                    let difference = UInt8(shift) - (UInt8(90) - currentLetterValue) - 1
-                    characterOut = (Character(UnicodeScalar(65 + difference)))
-                } else if oldChar.isUppercase && (currentLetterValue - UInt8(shift) < UInt8(65)) && !encode {
-                    let difference = UInt8(shift) - (currentLetterValue - UInt8(65)) - 1
-                    characterOut = (Character(UnicodeScalar(90 - difference)))
-                } else if oldChar.isLowercase && (currentLetterValue + UInt8(shift) > UInt8(122)) && encode {
-                    let difference = UInt8(shift) - (UInt8(122) - currentLetterValue) - 1
-                    characterOut = (Character(UnicodeScalar(97 + difference)))
-                } else if oldChar.isLowercase && (currentLetterValue - UInt8(shift) < UInt8(97)) && !encode {
-                    let difference = UInt8(shift) - (currentLetterValue - UInt8(97)) - 1
-                    characterOut = (Character(UnicodeScalar(122 - difference)))
-                } 
+            try input.forEach() { character in
+                var characterOut: Character = "A"
+                let currentLetterValue = character.asciiValue
+                if let currentLetterValue = currentLetterValue {
+                    let oldChar = character
+                    
+                    guard shift + Int(currentLetterValue) <= 255 else {
+                        throw CaesarCipherErrors.shiftIsTooHigh
+                    }
+                    
+                    guard shift >= 0 else {
+                        throw CaesarCipherErrors.shiftIsNegative
+                    }
+                    
+                    let newValue = encode ? currentLetterValue + UInt8(shift) : currentLetterValue - UInt8(shift)
+                  
+                    characterOut = Character(UnicodeScalar(newValue))
+                    
+                    if !((currentLetterValue >= 65 && currentLetterValue <= 90) || (currentLetterValue >= 97 && currentLetterValue <= 122)) {
+                        characterOut = character
+                    } else if oldChar.isUppercase && (currentLetterValue + UInt8(shift) > UInt8(90)) && encode {
+                        let difference = UInt8(shift) - (UInt8(90) - currentLetterValue) - 1
+                        characterOut = (Character(UnicodeScalar(65 + difference)))
+                    } else if oldChar.isUppercase && (currentLetterValue - UInt8(shift) < UInt8(65)) && !encode {
+                        let difference = UInt8(shift) - (currentLetterValue - UInt8(65)) - 1
+                        characterOut = (Character(UnicodeScalar(90 - difference)))
+                    } else if oldChar.isLowercase && (currentLetterValue + UInt8(shift) > UInt8(122)) && encode {
+                        let difference = UInt8(shift) - (UInt8(122) - currentLetterValue) - 1
+                        characterOut = (Character(UnicodeScalar(97 + difference)))
+                    } else if oldChar.isLowercase && (currentLetterValue - UInt8(shift) < UInt8(97)) && !encode {
+                        let difference = UInt8(shift) - (currentLetterValue - UInt8(97)) - 1
+                        characterOut = (Character(UnicodeScalar(122 - difference)))
+                    }
+                }
+                output.append(characterOut)
             }
-            output.append(characterOut)
-        }
+        
         return output
     }
 
     
     //----------Reverse Cipher----------//
-    static func reverseCipher(input: String) -> String {
+    static func reverseCipher(input: String) throws -> String {
         String(input.reversed())
     }
     
@@ -66,7 +79,19 @@ class CipherFunctions {
     //----------Enigma Cipher----------//
 
 
-    static func enigmaCipher(input: String, settings: EnigmaModel) -> String {
+    static func enigmaCipher(input: String, settings: EnigmaModel) throws -> String {
+        
+        func allCharactersAreUnique(_ string: String) -> Bool {
+            for firstIndex in string.indices {
+                   for secondIndex in string.indices.suffix(from: string.index(after: firstIndex)) {
+                       if (string[firstIndex] == string[secondIndex]) {
+                           return false
+                       }
+                   }
+               }
+            return true
+        }
+        
         var plugboard = Plugboard()
         
         var rotor1 = settings.rotors[0].rotorType
@@ -84,10 +109,25 @@ class CipherFunctions {
         var plugboardLetters = settings.plugboard.uppercased()
         plugboardLetters.removeAll(where: { $0 == " " })
         
+        guard plugboardLetters.count % 2 == 0 else {
+            throw EnigmaCipherErrors.plugboardIsIncorectNotEven
+        }
+        
+        guard allCharactersAreUnique(plugboardLetters) else {
+            throw EnigmaCipherErrors.plugboardContainsDuplicateCharacters
+        }
+        
+        
         var count = 0
         var tempLetters: (Character, Character) = (" ", " ")
         
-        plugboardLetters.forEach() { i in
+        try plugboardLetters.forEach() { i in
+            let currentLetterValue = i.asciiValue!
+
+            guard (currentLetterValue >= 65 && currentLetterValue <= 90) || (currentLetterValue >= 97 && currentLetterValue <= 122) else {
+                throw EnigmaCipherErrors.plugboardContainsInvalidCharacters
+            }
+            
             if count == 0 {
                 tempLetters.0 = i
             }

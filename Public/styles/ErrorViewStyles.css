@@ -1,0 +1,28 @@
+body {
+    padding: 0px;
+    margin 0px;
+}
+
+.outputBox {
+    padding: 0px;
+    margin 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #E05D56;
+    text-align: center;
+    display: table;
+}
+
+
+.outputBoxText {
+    padding: 0px;
+    margin: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #FFFFFF;
+}

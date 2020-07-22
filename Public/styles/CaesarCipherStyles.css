@@ -124,6 +124,9 @@ body {
     background-color: #FFFFFF;
     border-width: 0px;
     outline: none !important;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 10px;
 }
 
 
@@ -167,13 +170,14 @@ body {
     border-radius: 10px;
     background-color: #181E30;
     border-width: 0px;
-    color: white;
-    margin: 0;
     position: absolute;
     margin: 0;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, 0%);
+    font-family: Arial;
+    color: #E8EFFA;
+    font-size: 12px;
 }
 
 .submitBtnDiv {

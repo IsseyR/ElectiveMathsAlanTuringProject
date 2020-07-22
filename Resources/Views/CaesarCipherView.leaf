@@ -41,7 +41,9 @@
         function increaseShift() {
             let currentNum = document.getElementById("shiftDisplayBox").value;
             var numInt = parseInt(currentNum);
-            numInt += 1;
+            if (currentNum < 256) {
+                numInt += 1;
+            }
             currentNum = numInt.toString();
           document.getElementById("shiftDisplayBox").value = currentNum;
         }
@@ -49,9 +51,11 @@
         function decreaseShift() {
             let currentNum = document.getElementById("shiftDisplayBox").value;
             var numInt = parseInt(currentNum);
-            numInt -= 1;
+            if (currentNum > 0) {
+                numInt -= 1;
+            }
             currentNum = numInt.toString();
-          document.getElementById("shiftDisplayBox").value = currentNum;
+            document.getElementById("shiftDisplayBox").value = currentNum;
         }
     </script>
     <script src="/scripts/CaesarShiftUpdater.js"></script>

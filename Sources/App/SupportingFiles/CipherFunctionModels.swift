@@ -38,3 +38,22 @@ struct ReplacementModel {
     var newString = String()
     var caseSensitive = String()
 }
+
+
+//----------Error Models----------//
+
+//----------Caesar Cipher----------//
+
+enum CaesarCipherErrors: Error {
+    case shiftIsNegative
+    case shiftIsTooHigh
+}
+
+//----------Enigma Cipher----------//
+
+enum EnigmaCipherErrors: Error {
+    case plugboardIsIncorectNotEven
+    case plugboardContainsInvalidCharacters
+    case plugboardContainsDuplicateCharacters
+}
+
