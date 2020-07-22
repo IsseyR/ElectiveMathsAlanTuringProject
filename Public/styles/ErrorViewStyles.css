@@ -1,6 +1,7 @@
 body {
     padding: 0px;
     margin 0px;
+    background-color: #E05D56;
 }
 
 .outputBox {
@@ -9,7 +10,6 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color: #E05D56;
     text-align: center;
     display: table;
 }
