@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/EnigmaCipherStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enigma Cipher</title>
+  </head>
+  <body>
+      <form method="POST" action="/enigmaOutput">
+        <div class="selectionDiv">
+            <h2 class="cipherTitle">Enigma Cipher</h2>
+            <div class="enigmaCipherOptionsContainer">
+<!--              <div class="encodeOrDecodeSelction">-->
+<!--                  <label for="encodeOrDecode">Encode / Decode</label>-->
+<!--                  <select name="encodeOrDecode" id="encodeOrDecode">-->
+<!--                    <option value="encode">Encode</option>-->
+<!--                    <option value="decode">Decode</option>-->
+<!--              -->
+<!--                  </select>-->
+<!--              </div>-->
+              
+              <div class="plugboard" >
+                  <label for="plugboard">Pluboard</label>
+                  <input type="text" id="plugboard" name="plugboard" class="plugboardInput">
+              </div>
+              
+              <div class="blank"></div>
+
+              <div class="reflectorSelection">
+                  <label for="reflector">Reflector</label>
+                  <select name="reflector" id="reflector">
+                    <option value="a">UKW A</option>
+                    <option value="b">UKW B</option>
+                    <option value="b">UKW C</option>
+                  </select>
+              </div>
+              <div class="rotor1NumSelction">
+                  <label for="rotor1Num">Rotor 1</label>
+                  <select name="rotor1Num" id="rotor1Num">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                  </select>
+              </div>
+              <div class="rotor1Position">
+                  <label for="rotor1Position">Position 1</label>
+                  <select name="rotor1Position" id="rotor1Position">
+                      <option value=1>1 (A)</option>
+                      <option value=2>2 (B)</option>
+                      <option value=3>3 (C)</option>
+                      <option value=4>4 (D)</option>
+                      <option value=5>5 (E)</option>
+                      <option value=6>6 (F)</option>
+                      <option value=7>7 (G)</option>
+                      <option value=8>8 (H)</option>
+                      <option value=9>9 (I)</option>
+                      <option value=10>10 (J)</option>
+                      <option value=11>11 (K)</option>
+                      <option value=12>12 (L)</option>
+                      <option value=13>13 (M)</option>
+                      <option value=14>14 (N)</option>
+                      <option value=15>15 (O)</option>
+                      <option value=16>16 (P)</option>
+                      <option value=17>17 (Q)</option>
+                      <option value=18>18 (R)</option>
+                      <option value=19>19 (S)</option>
+                      <option value=20>20 (T)</option>
+                      <option value=21>21 (U)</option>
+                      <option value=22>22 (V)</option>
+                      <option value=23>23 (W)</option>
+                      <option value=24>24 (X)</option>
+                      <option value=25>25 (Y)</option>
+                      <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+              <div class="rotor1Ring">
+                  <label for="rotor1Ring">Ring 1</label>
+                  <select name="rotor1Ring" id="rotor1Ring">
+                      <option value=1>1 (A)</option>
+                      <option value=2>2 (B)</option>
+                      <option value=3>3 (C)</option>
+                      <option value=4>4 (D)</option>
+                      <option value=5>5 (E)</option>
+                      <option value=6>6 (F)</option>
+                      <option value=7>7 (G)</option>
+                      <option value=8>8 (H)</option>
+                      <option value=9>9 (I)</option>
+                      <option value=10>10 (J)</option>
+                      <option value=11>11 (K)</option>
+                      <option value=12>12 (L)</option>
+                      <option value=13>13 (M)</option>
+                      <option value=14>14 (N)</option>
+                      <option value=15>15 (O)</option>
+                      <option value=16>16 (P)</option>
+                      <option value=17>17 (Q)</option>
+                      <option value=18>18 (R)</option>
+                      <option value=19>19 (S)</option>
+                      <option value=20>20 (T)</option>
+                      <option value=21>21 (U)</option>
+                      <option value=22>22 (V)</option>
+                      <option value=23>23 (W)</option>
+                      <option value=24>24 (X)</option>
+                      <option value=25>25 (Y)</option>
+                      <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+              <div class="rotor2NumSelction">
+                  <label for="rotor2Num">Rotor 2</label>
+                  <select name="rotor2Num" id="rotor2Num">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                  </select>
+              </div>
+              <div class="rotor2Position">
+                  <label for="rotor2Position">Position 2</label>
+                  <select name="rotor2Position" id="rotor1Position">
+                      <option value=1>1 (A)</option>
+                      <option value=2>2 (B)</option>
+                      <option value=3>3 (C)</option>
+                      <option value=4>4 (D)</option>
+                      <option value=5>5 (E)</option>
+                      <option value=6>6 (F)</option>
+                      <option value=7>7 (G)</option>
+                      <option value=8>8 (H)</option>
+                      <option value=9>9 (I)</option>
+                      <option value=10>10 (J)</option>
+                      <option value=11>11 (K)</option>
+                      <option value=12>12 (L)</option>
+                      <option value=13>13 (M)</option>
+                      <option value=14>14 (N)</option>
+                      <option value=15>15 (O)</option>
+                      <option value=16>16 (P)</option>
+                      <option value=17>17 (Q)</option>
+                      <option value=18>18 (R)</option>
+                      <option value=19>19 (S)</option>
+                      <option value=20>20 (T)</option>
+                      <option value=21>21 (U)</option>
+                      <option value=22>22 (V)</option>
+                      <option value=23>23 (W)</option>
+                      <option value=24>24 (X)</option>
+                      <option value=25>25 (Y)</option>
+                      <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+              <div class="rotor2Ring">
+                  <label for="rotor2Ring">Ring 2</label>
+                  <select name="rotor2Ring" id="rotor2Ring">
+                      <option value=1>1 (A)</option>
+                      <option value=2>2 (B)</option>
+                      <option value=3>3 (C)</option>
+                      <option value=4>4 (D)</option>
+                      <option value=5>5 (E)</option>
+                      <option value=6>6 (F)</option>
+                      <option value=7>7 (G)</option>
+                      <option value=8>8 (H)</option>
+                      <option value=9>9 (I)</option>
+                      <option value=10>10 (J)</option>
+                      <option value=11>11 (K)</option>
+                      <option value=12>12 (L)</option>
+                      <option value=13>13 (M)</option>
+                      <option value=14>14 (N)</option>
+                      <option value=15>15 (O)</option>
+                      <option value=16>16 (P)</option>
+                      <option value=17>17 (Q)</option>
+                      <option value=18>18 (R)</option>
+                      <option value=19>19 (S)</option>
+                      <option value=20>20 (T)</option>
+                      <option value=21>21 (U)</option>
+                      <option value=22>22 (V)</option>
+                      <option value=23>23 (W)</option>
+                      <option value=24>24 (X)</option>
+                      <option value=25>25 (Y)</option>
+                      <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+              <div class="rotor3NumSelction">
+                  <label for="rotor3Num">Rotor 3</label>
+                  <select name="rotor3Num" id="rotor3Num">
+                    <option value="I">I</option>
+                    <option value="II">II</option>
+                    <option value="III">III</option>
+                    <option value="IV">IV</option>
+                    <option value="V">V</option>
+                  </select>
+              </div>
+              <div class="rotor3Position">
+                  <label for="rotor3Position">Position 3</label>
+                  <select name="rotor3Position" id="rotor1Position">
+                      <option value=1>1 (A)</option>
+                      <option value=2>2 (B)</option>
+                      <option value=3>3 (C)</option>
+                      <option value=4>4 (D)</option>
+                      <option value=5>5 (E)</option>
+                      <option value=6>6 (F)</option>
+                      <option value=7>7 (G)</option>
+                      <option value=8>8 (H)</option>
+                      <option value=9>9 (I)</option>
+                      <option value=10>10 (J)</option>
+                      <option value=11>11 (K)</option>
+                      <option value=12>12 (L)</option>
+                      <option value=13>13 (M)</option>
+                      <option value=14>14 (N)</option>
+                      <option value=15>15 (O)</option>
+                      <option value=16>16 (P)</option>
+                      <option value=17>17 (Q)</option>
+                      <option value=18>18 (R)</option>
+                      <option value=19>19 (S)</option>
+                      <option value=20>20 (T)</option>
+                      <option value=21>21 (U)</option>
+                      <option value=22>22 (V)</option>
+                      <option value=23>23 (W)</option>
+                      <option value=24>24 (X)</option>
+                      <option value=25>25 (Y)</option>
+                      <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+              <div class="rotor3Ring">
+                  <label for="rotor3Ring">Ring 3</label>
+                  <select name="rotor3Ring" id="rotor3Ring">
+                    <option value=1>1 (A)</option>
+                    <option value=2>2 (B)</option>
+                    <option value=3>3 (C)</option>
+                    <option value=4>4 (D)</option>
+                    <option value=5>5 (E)</option>
+                    <option value=6>6 (F)</option>
+                    <option value=7>7 (G)</option>
+                    <option value=8>8 (H)</option>
+                    <option value=9>9 (I)</option>
+                    <option value=10>10 (J)</option>
+                    <option value=11>11 (K)</option>
+                    <option value=12>12 (L)</option>
+                    <option value=13>13 (M)</option>
+                    <option value=14>14 (N)</option>
+                    <option value=15>15 (O)</option>
+                    <option value=16>16 (P)</option>
+                    <option value=17>17 (Q)</option>
+                    <option value=18>18 (R)</option>
+                    <option value=19>19 (S)</option>
+                    <option value=20>20 (T)</option>
+                    <option value=21>21 (U)</option>
+                    <option value=22>22 (V)</option>
+                    <option value=23>23 (W)</option>
+                    <option value=24>24 (X)</option>
+                    <option value=25>25 (Y)</option>
+                    <option value=26>26 (Z)</option>
+                  </select>
+              </div>
+            </div>
+            <a> NOTE:
+                Letters in the plugboard must be entered in groups of 2 with spaces between (e.g. ab cd ef) to avoid an error or incorerect output.
+                Letters must also not be used twice. Scroll down if the text input is cut off.</a>
+            <div class="submitBtnDiv">
+                <input class="cipherSubmitBtn" type="submit" value="Start Cipher">
+            </div>
+        </div>
+            
+    <textarea type="text" class="textInput" name="textInput" placeholder="Enter text to translate"></textarea>
+      </form>
+
+  </body>
+</html>
+

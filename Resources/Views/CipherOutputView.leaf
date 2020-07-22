@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/styles/CipherOutputStyles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>#(title)</title>
+    </head>
+    <body>
+            <div class="outputBox">
+                <a class="outputBoxText">#(cipherOut)</a>
+            </div>
+    </body>
+</html>

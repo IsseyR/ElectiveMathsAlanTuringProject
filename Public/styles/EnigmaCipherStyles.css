@@ -1,0 +1,170 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+/*.encodeOrDecodeSelction {*/
+/*    grid-area: encodeOrDecodeSelction;*/
+/*}*/
+
+.blank {
+    grid-area: blank;
+
+}
+
+.reflectorSelection {
+    grid-area: reflectorSelection;
+    
+}
+
+.reflectorSelection {
+    grid-area: reflectorSelection;
+
+}
+
+.rotor1NumSelction {
+    grid-area: rotor1NumSelction;
+}
+
+.rotor1Position {
+    grid-area: rotor1Position;
+}
+
+.rotor1Ring {
+    grid-area: rotor1Ring;
+}
+
+.rotor2NumSelction {
+    grid-area: rotor2NumSelction;
+}
+
+.rotor2Position {
+    grid-area: rotor2Position;
+}
+
+.rotor2Ring {
+    grid-area: rotor2Ring;
+}
+
+.plugboard {
+    grid-area: plugboard;
+
+}
+
+.rotor3NumSelction {
+    grid-area: rotor3NumSelction;
+}
+
+.rotor3Position {
+    grid-area: rotor3Position;
+}
+
+.rotor3Ring {
+    grid-area: rotor3Ring;
+}
+
+
+
+.enigmaCipherOptionsContainer {
+  display: grid;
+  grid-template-areas:
+    'plugboard blank reflectorSelection'
+    'rotor1NumSelction rotor1Position rotor1Ring'
+    'rotor2NumSelction rotor2Position rotor2Ring'
+    'rotor3NumSelction rotor3Position rotor3Ring';
+  grid-gap: 10px;
+  padding: 10px;
+  width: 75vw;
+  padding-right: 5px;
+  
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.enigmaCipherOptionsContainer > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  height: 35px;
+  width: 25vw;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+
+.cipherTitle {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #181E30;
+    
+}
+
+.selectionDiv {
+    align: center;
+    padding: 0px;
+    margin-top: -50px;
+    background-color: #E8EFFA;
+    text-align: center;
+
+}
+
+.selectionDiv a {
+    color: #181E30;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+
+
+.textInput {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    outline: none !important;
+}
+
+
+.cipherSubmitBtn {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: #181E30;
+    border-width: 0px;
+    color: white;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+.submitBtnDiv {
+    padding: 30px;
+}
+
+.enigmaCipherOptionsContainer > div input, select {
+    height: 50px;
+    width: 10vw;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #F5F5F5;
+    margin: 0;
+    transform: translate(0%, -20%);
+}
+
+
+
+.enigmaCipherOptionsContainer > div label {
+    color: #181E30;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+
+
+

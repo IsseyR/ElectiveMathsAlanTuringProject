@@ -1,0 +1,114 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.cipherTitle {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #181E30;
+    
+}
+
+.selectionDiv {
+    align: center;
+    padding: 0px;
+    margin-top: -50px;
+    background-color: #E8EFFA;
+}
+
+.replaceSelectionDiv > div {
+  flex: 1;
+}
+
+.replaceSelectionDiv {
+    display: flex;
+    padding: 20px;
+}
+
+.findBox {
+    margin-top 20px;
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100;
+    border-width: 0px;
+    float: right;
+    outline: none !important;
+}
+
+.withMiddleText {
+    font-family: 'Anton', sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    color: #181E30;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+.replaceBox {
+    
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    float: left;
+    outline: none !important;
+    
+ 
+}
+
+
+.textInput {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    outline: none !important;
+}
+
+
+.cipherSubmitBtn {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: #181E30;
+    border-width: 0px;
+    color: white;
+    margin: 0;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+
+.submitBtnDiv {
+    padding: 30px;
+}
+
+
+.caseSensitiveCheckboxDiv {
+    color: #181E30;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    color: #181E30;
+    font-family: Arial;
+    font-size: 15px;
+}

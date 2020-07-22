@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/ReplaceCipherStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Replace Cipher</title>
+  </head>
+  <body>
+      <form method="POST" action="/replaceOutput">
+    <div class="selectionDiv">
+        <h2 class="cipherTitle" >Replace Cipher</h2>
+        <div class="replaceSelectionDiv">
+            <div><input class="findBox" placeholder="Find" type="text" name="oldString"></div>
+            <div><a class="withMiddleText">Replace With</a></div>
+            <div><input class="replaceBox" placeholder="Replacement" type="text" name="newString"></div>
+        </div>
+        
+        <div class="caseSensitiveCheckboxDiv">
+            <input clas="isCaseSensitiveCheckBox" type="checkbox" id="caseSensitive" name="caseSensitive" value="sensitive">
+            <label for="caseSensitiveCB"> Case Sensitive</label><br>
+        </div>
+
+
+        
+        <div class="submitBtnDiv">
+            <input class="cipherSubmitBtn" type="submit" value="Start Cipher">
+        </div>
+    </div>
+            
+    <textarea type="text" class="textInput" name="textInput" placeholder="Enter text to translate"></textarea>
+      </form>
+  </body>
+</html>
+

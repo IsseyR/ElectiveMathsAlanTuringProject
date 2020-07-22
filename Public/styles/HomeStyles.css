@@ -1,0 +1,43 @@
+body {
+    padding: 0px;
+    margin 0px;
+}
+
+
+body a {
+    text-decoration: none;
+
+}
+.cipherBox {
+    width: 100%;
+    height: 100%;
+    background-color: #181E30;
+    text-align: center;
+    line-height: 100vh;
+}
+
+/*.turingMachineBox {*/
+/*    background-color: #E8EFFA;*/
+/*    width: 49vw;*/
+/*    height: 100vh;*/
+/*    float: right;*/
+/*    text-align: center;*/
+/*    line-height: 100vh;*/
+/*}*/
+/**/
+/*.turingMachineBoxText {*/
+/*    font-family: 'Anton', sans-serif;*/
+/*    font-weight: bolder;*/
+/*    font-size: 50px;*/
+/*    color: #181E30;*/
+/*}*/
+
+.cipherBoxText {
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #E8EFFA;
+    text-align: center;
+}
+
+

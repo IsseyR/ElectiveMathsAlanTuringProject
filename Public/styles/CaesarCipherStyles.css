@@ -1,0 +1,181 @@
+body {
+  background-color: white;
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+.cipherTitle {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    font-size: 50px;
+    color: #181E30;
+    
+}
+
+.selectionDiv {
+    align: center;
+    padding: 0px;
+    margin-top: -50px;
+    background-color: #E8EFFA;
+}
+
+/*.chpherDropdown {*/
+/*    width: 30%;*/
+/*    position: relative;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    height: 50px;*/
+/*    border-radius: 10px;*/
+/*    background-color: #FFFFFF;*/
+/*    border-width: 0px;*/
+/*    transform: translate(-50%,-50%);*/
+/*}*/
+
+.cipherLeftBtn {
+    margin-top 20px;
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100;
+    border-width: 0px;
+    float: right;
+    outline: none !important;
+/*    margin: 0;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    margin-right: -20%;*/
+/*    transform: translate(-50%, 0%);*/
+}
+
+.cipherRightBtn {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 100;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    float: left;
+    outline: none !important;
+
+/*    margin: 0;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    margin-right: -50%;*/
+/*    transform: translate(-50%, 0%);*/
+    
+}
+
+/*.rowLeftBox {*/
+/*    width: 49vw;*/
+/*    height: 100vh;*/
+/*    background-color: red;*/
+/*    float: left;*/
+/**/
+/*}*/
+/**/
+/*.rowRightBox {*/
+/*    width: 49vw;*/
+/*    height: 100vh;*/
+/*    background-color: blue;*/
+/*    float: right;*/
+/**/
+/*}*/
+
+/*.caesarShiftDiv {*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    flex-direction: row;*/
+/*    width: 50%;*/
+/*}*/
+
+.shiftDisplayBox {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    outline: none !important;
+}
+
+.shiftSelectionDiv > div {
+  flex: 1; /*grow*/
+}
+
+.shiftSelectionDiv {
+    display: flex;
+    padding: 20px;
+}
+
+.textInput {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+    border-width: 0px;
+    outline: none !important;
+}
+
+
+.codeDirectionSelectionDiv {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.codeDirectionSelectionDiv > div {
+  flex: 1; /*grow*/
+}
+
+.encodeRadioBtn {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+    float: right;
+    color: #181E30;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.decodeRadioBtn {
+    margin: 0px;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 100%);
+    float: right;
+    color: #181E30;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.cipherSubmitBtn {
+    width: 100px;
+    height: 20px;
+    background-color: white;
+    border-radius: 10px;
+    background-color: #181E30;
+    border-width: 0px;
+    color: white;
+    margin: 0;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}
+
+.submitBtnDiv {
+    padding: 30px;
+}

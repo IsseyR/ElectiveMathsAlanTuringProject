@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/ReverseCipherStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reverse Cipher</title>
+  </head>
+  <body>
+      <form method="POST" action="/reverseOutput">
+    <div class="selectionDiv">
+        <h2 class="cipherTitle" >Reverse Cipher</h2>
+
+        <div class="submitBtnDiv">
+            <input class="cipherSubmitBtn" type="submit" value="Start Cipher">
+        </div>
+    </div>
+            
+    <textarea type="text" class="textInput" name="textInput" placeholder="Enter text to translate"></textarea>
+      </form>
+  </body>
+</html>

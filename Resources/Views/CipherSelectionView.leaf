@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/CipherSelectionStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select Cipher</title>
+    
+  </head>
+  <body>
+      <div class="gridContainer">
+          <a href="/caesarCipher/">
+              <div class="gridItem">Caesar Cipher</div>
+          </a>
+          <a href="/reverseCipher/">
+              <div class="gridItem">Reverse Cipher</div>
+          </a>
+          <a href="/replaceCipher/">
+              <div class="gridItem">Replace Cipher</div>
+          </a>
+          <a href="/enigmaCipher/">
+              <div class="gridItem">Enigma Cipher</div>
+          </a>
+      </div>
+  </body>
+</html>

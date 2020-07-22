@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/styles/CaesarCipherStyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caesar Cipher</title>
+  </head>
+  <body>
+      <form method="POST" action="/caesarOutput">
+    <div class="selectionDiv">
+        <h2 class="cipherTitle" >Caesar Cipher</h2>
+        
+            <div class="shiftSelectionDiv">
+                <div><button class="cipherLeftBtn" id="reduceShiftBtn" type="button" onClick="decreaseShift()">-</button></div>
+                <div><input class="shiftDisplayBox" type="number" name="caesarShift" value="0" id="shiftDisplayBox"></div>
+                <div><button class="cipherRightBtn" id="increaseShiftBtn" type="button" onClick="increaseShift()">+</button></div>
+            </div>
+               <div class="codeDirectionSelectionDiv">
+                   <div class="encodeRadioBtn">
+                       <input type="radio" id="encode" name="codeDirectionSelection" value="encode" checked="checked">
+                    <label for="encode">Encode</label><br>
+                   </div>
+                   <div class="decodeRadioBtn">
+                       <input type="radio" id="decode" name="codeDirectionSelection" value="decode">
+                    <label for="decode">Decode</label><br>
+                   </div>
+                </div>
+            <div class="submitBtnDiv">
+                <input class="cipherSubmitBtn" type="submit" value="Start Cipher">
+            </div>
+
+
+    </div>
+            
+    <textarea type="text" class="textInput" name="textInput" placeholder="Enter text to translate"></textarea>
+    
+    <script>
+
+        function increaseShift() {
+            let currentNum = document.getElementById("shiftDisplayBox").value;
+            var numInt = parseInt(currentNum);
+            numInt += 1;
+            currentNum = numInt.toString();
+          document.getElementById("shiftDisplayBox").value = currentNum;
+        }
+    
+        function decreaseShift() {
+            let currentNum = document.getElementById("shiftDisplayBox").value;
+            var numInt = parseInt(currentNum);
+            numInt -= 1;
+            currentNum = numInt.toString();
+          document.getElementById("shiftDisplayBox").value = currentNum;
+        }
+    </script>
+    <script src="/scripts/CaesarShiftUpdater.js"></script>
+      </form>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.gridContainer {
+    display: grid;
+    height 100vh;
+    width 100vw;
+    grid-template-columns: auto auto auto;
+}
+
+.gridItem {
+  background-color: #181E30;
+  padding: 90px;
+  margin: 5px;
+  font-size: 30px;
+  text-align: center;
+  color: #E8EFFA;
+  font-family: 'Anton', sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+}
+
+
+.gridItem:hover {
+    color: #181E30;
+    background-color: #E8EFFA;
+}
+
+
+.gridContainer a {
+    text-decoration: none;
+
+}
