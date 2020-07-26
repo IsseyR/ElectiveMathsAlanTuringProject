@@ -11,7 +11,7 @@ import EnigmaKit
 
 //----------Enigma Cipher----------//
 
-enum RotorModel: Int {
+enum RotorModel {
     case I
     case II
     case III
@@ -27,7 +27,7 @@ struct EnigmaRotorModel {
 
 struct EnigmaModel {
     let rotors: [EnigmaRotorModel]
-    var plugboard: String
+    let plugboard: String
     let reflector: Reflector
 }
 

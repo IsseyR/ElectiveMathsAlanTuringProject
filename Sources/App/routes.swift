@@ -88,7 +88,7 @@ func routes(_ app: Application) throws {
         } catch CaesarCipherErrors.shiftIsTooHigh {
             print("🔴 SHIFT TOO HIGH CAESAR ERROR: \(CaesarCipherErrors.shiftIsTooHigh) 🔴")
             return req.view.render("ErrorView", [
-                "errorOut" : "There was an error. This is most likely due to the shift being too high. Make sure the shift + the ASCII value of each letter is 255 or less. In general there is no need to go above 26 as it just loops around back to 0 beyond that."
+                "errorOut" : "There was an error. This is most likely due to the shift being too high. Make sure the shift + the ASCII value of each letter is 52 or less. In general there is no need to go above 26 as it just loops around back to 0 beyond that."
             ])
         } catch {
             print("🔴 UNKNOWN CAESAR ERROR 🔴")
@@ -154,10 +154,13 @@ func routes(_ app: Application) throws {
         do {
             let output = try CipherFunctions.enigmaCipher(
                 input: data.textInput,
-                settings: EnigmaModel(rotors: [EnigmaRotorModel(position: data.rotor1Position, ring: data.rotor1Ring, rotorType: rotor1),
-                EnigmaRotorModel(position: data.rotor2Position, ring: data.rotor2Ring, rotorType: rotor2),
-                EnigmaRotorModel(position: data.rotor2Position, ring: data.rotor2Ring, rotorType: rotor3)],
-                plugboard: data.plugboard, reflector: reflector))
+                settings: EnigmaModel(
+                    rotors: [
+                    EnigmaRotorModel(position: data.rotor1Position, ring: data.rotor1Ring, rotorType: rotor1),
+                    EnigmaRotorModel(position: data.rotor2Position, ring: data.rotor2Ring, rotorType: rotor2),
+                    EnigmaRotorModel(position: data.rotor2Position, ring: data.rotor2Ring, rotorType: rotor3)
+                    ],
+                    plugboard: data.plugboard, reflector: reflector))
             
             return req.view.render("CipherOutputView", [
                 "cipherOut" : output
