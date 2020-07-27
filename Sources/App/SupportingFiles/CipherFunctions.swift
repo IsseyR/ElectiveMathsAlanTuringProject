@@ -23,7 +23,7 @@ class CipherFunctions {
                 if let currentLetterValue = currentLetterValue {
                     let oldChar = character
                     
-                    guard shift + Int(currentLetterValue) <= 256 else {
+                    guard shift + Int(currentLetterValue) <= 255 else {
                         throw CaesarCipherErrors.shiftIsTooHigh
                     }
                     
