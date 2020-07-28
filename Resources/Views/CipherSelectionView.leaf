@@ -22,6 +22,10 @@
           <a href="/enigmaCipher/">
               <div class="gridItem">Enigma Cipher</div>
           </a>
+                    </a>
+          <a href="https://docs.google.com/document/d/1YChluNhuxEWF_jnAzMf_SMKwUcAVECyv6WAVL7cuIkU/edit?usp=sharing">
+              <div class="gridItem">Code Doc</div>
+          </a>
       </div>
   </body>
 </html>

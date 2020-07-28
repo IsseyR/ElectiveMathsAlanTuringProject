@@ -154,6 +154,7 @@ class CipherFunctions {
         let enigma = Enigma(reflector: settings.reflector, rotors: [rotor1, rotor2, rotor3], plugboard: plugboard)
         
         return enigma.encode(input.uppercased())
+        
     }
     
 //    static func enigmaCipher1() -> String {
