@@ -58,8 +58,5 @@
             document.getElementById("shiftDisplayBox").value = currentNum;
         }
     </script>
-    <script src="/scripts/CaesarShiftUpdater.js"></script>
-      </form>
-
   </body>
 </html>
